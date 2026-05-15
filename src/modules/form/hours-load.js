@@ -5,6 +5,9 @@ import { hoursClick } from "./hours-click";
 const hours = document.getElementById("hours");
 
 export function hoursLoad({ date }) {
+  //limpa a lsita de horários
+  hours.innerHTML = "";
+
   const opening = openingHours.map((hour) => {
     //recupera somente a hora
     const [scheduleHour, _] = hour.split(":");
@@ -37,7 +40,7 @@ export function hoursLoad({ date }) {
   });
 
   //adiciona os eventos de click nos horários disponíveis
-  hoursClick()
+  hoursClick();
 }
 
 function hourHeaderAdd(title) {
