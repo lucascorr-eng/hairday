@@ -1,0 +1,20 @@
+import { apiCofig } from "./api-config";
+
+export async function scheduleNew(id, name, when) {
+  try {
+    //faz a requisição para enviar os dados do agendamento
+    await fetch(`${apiCofig.baseURL}/schedules`, {
+      method: "POST",
+      headers: {
+        "Content-type": "aplicattion/json",
+      },
+      body: JSON.stringify({ id, name, when }),
+    });
+
+    //exibe uma mensagem de agendamento
+    alert("Agendamento realizado com sucesso");
+  } catch (error) {
+    console.log(error);
+    alert("Não foi possível agendar. Tente novamente mais tarde!");
+  }
+}
