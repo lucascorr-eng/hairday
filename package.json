@@ -1,6 +1,6 @@
 {
   "name": "hairday",
-  "description": "Aplicação web apra agendamento de corte de cabelo",
+  "description": "Aplicação web para agendamento de corte de cabelo",
   "autor": "Lucas Corrêa",
   "scripts": {
     "build": "webpack",
