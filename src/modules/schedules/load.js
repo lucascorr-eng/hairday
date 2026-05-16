@@ -13,7 +13,7 @@ export async function schedulesDay() {
   const dailySchedules = await scheduleFetchByDay({ date });
 
   //exibe os agendamentos
-  console.log(dailySchedules);
+  console.log({ dailySchedules });
   schedulesShow({ dailySchedules });
 
   //renderiza as horas disponíveisB

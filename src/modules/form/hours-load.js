@@ -5,7 +5,7 @@ import { hoursClick } from "./hours-click";
 const hours = document.getElementById("hours");
 
 export function hoursLoad({ date }) {
-  //limpa a lsita de horários
+  //limpa a lista de horários
   hours.innerHTML = "";
 
   const opening = openingHours.map((hour) => {

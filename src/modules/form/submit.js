@@ -6,7 +6,7 @@ const form = document.querySelector("form");
 const clientName = document.getElementById("client");
 const selectedDate = document.getElementById("date");
 
-//data atal para o input
+//data atual para o input
 const inputToday = dayjs(new Date()).format("YYYY-MM-DD");
 
 //data atual para formatar o input
@@ -16,7 +16,7 @@ selectedDate.value = inputToday;
 selectedDate.min = inputToday;
 
 form.onsubmit = async (event) => {
-  //previne o comportamente padrão de carregar a página
+  //previne o comportamento padrão de carregar a página
   event.preventDefault();
 
   try {
@@ -24,7 +24,7 @@ form.onsubmit = async (event) => {
     const name = clientName.value.trim();
 
     if (!name) {
-      return alert("Infore o nome do cliente!");
+      return alert("Informe o nome do cliente!");
     }
 
     //horário selecionado
@@ -36,7 +36,7 @@ form.onsubmit = async (event) => {
     //recupera somente a hora
     const [hour] = hourSelected.innerText.split(":");
 
-    //isnerir a hora na data
+    //inserir a hora na data
     const when = dayjs(selectedDate.value).add(hour, "hour");
     const id = new Date().getTime();
 
@@ -46,6 +46,6 @@ form.onsubmit = async (event) => {
       when,
     });
   } catch (error) {
-    alert("Não foi possível realziar o agendamento. ");
+    alert("Não foi possível realizar o agendamento. ");
   }
 };
