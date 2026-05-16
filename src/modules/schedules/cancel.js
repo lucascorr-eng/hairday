@@ -25,7 +25,7 @@ periods.forEach((period) => {
           await scheduleCancel({ id });
 
           //reload da page
-          schedulesDay;
+          schedulesDay();
         }
       }
     }
